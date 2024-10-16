@@ -70,7 +70,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f0f4f8;
+  background-color: #e8f0fe;
 }
 
 .chat-container {
@@ -86,7 +86,7 @@ onMounted(() => {
 
 .chat-title {
   text-align: center;
-  color: #333;
+  color: #1a73e8;
   margin-bottom: 20px;
   font-size: 24px;
 }
@@ -95,11 +95,11 @@ onMounted(() => {
   height: 400px;
   overflow-y: auto;
   padding: 15px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #d2e3fc;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  background-color: #f9f9f9;
+  background-color: #f8f9fa;
 }
 
 .message {
@@ -119,7 +119,7 @@ onMounted(() => {
 }
 
 .user .message-content {
-  background-color: #007bff;
+  background-color: #1a73e8;
   color: white;
   border-bottom-right-radius: 4px;
 }
@@ -129,8 +129,8 @@ onMounted(() => {
 }
 
 .bot .message-content {
-  background-color: #e9ecef;
-  color: #333;
+  background-color: #e8f0fe;
+  color: #202124;
   border-bottom-left-radius: 4px;
 }
 
@@ -142,7 +142,7 @@ onMounted(() => {
 input {
   flex-grow: 1;
   padding: 12px 16px;
-  border: 2px solid #007bff;
+  border: 2px solid #1a73e8;
   border-radius: 25px;
   font-size: 16px;
   outline: none;
@@ -150,12 +150,12 @@ input {
 }
 
 input:focus {
-  border-color: #0056b3;
+  border-color: #174ea6;
 }
 
 button {
   padding: 12px 24px;
-  background-color: #007bff;
+  background-color: #1a73e8;
   color: white;
   border: none;
   border-radius: 25px;
@@ -167,6 +167,6 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #174ea6;
 }
 </style>
