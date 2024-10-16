@@ -41,13 +41,14 @@ onMounted(() => {
 <template>
   <div class="page-container">
     <div class="chat-container">
+      <h1 class="chat-title">AI Chat Assistant</h1>
       <div class="chat-messages">
         <div
           v-for="message in messages"
           :key="message.id"
-          :class="message.sender"
+          :class="['message', message.sender]"
         >
-          {{ message.text }}
+          <div class="message-content">{{ message.text }}</div>
         </div>
       </div>
       <div class="chat-input">
@@ -69,65 +70,103 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: #f0f4f8;
 }
+
 .chat-container {
-  max-width: 600px;
+  max-width: 800px;
+  width: 90%;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: none;
+  border-radius: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chat-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .chat-messages {
-  height: 300px;
+  height: 400px;
   overflow-y: auto;
-  padding: 10px;
-  border: 1px solid #eee;
-  border-radius: 8px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
+  background-color: #f9f9f9;
 }
 
 .message {
-  margin-bottom: 10px;
-  padding: 8px;
-  border-radius: 8px;
-  max-width: 70%;
+  margin-bottom: 15px;
+  max-width: 80%;
+}
+
+.message-content {
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 .user {
-  background-color: #e6f2ff;
   align-self: flex-end;
-  margin-left: auto;
+}
+
+.user .message-content {
+  background-color: #007bff;
+  color: white;
+  border-bottom-right-radius: 4px;
 }
 
 .bot {
-  background-color: #f0f0f0;
   align-self: flex-start;
+}
+
+.bot .message-content {
+  background-color: #e9ecef;
+  color: #333;
+  border-bottom-left-radius: 4px;
 }
 
 .chat-input {
   display: flex;
+  margin-top: 20px;
 }
 
 input {
   flex-grow: 1;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-right: 10px;
+  padding: 12px 16px;
+  border: 2px solid #007bff;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #0056b3;
 }
 
 button {
-  padding: 8px 16px;
-  background-color: #4caf50;
+  padding: 12px 24px;
+  background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
+  margin-left: 10px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #0056b3;
 }
 </style>
