@@ -70,7 +70,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #e8f0fe;
+  background-color: #f0f8ff; /* Changed from #e8f0fe to a lighter blue */
 }
 
 .chat-container {
@@ -86,7 +86,7 @@ onMounted(() => {
 
 .chat-title {
   text-align: center;
-  color: #1a73e8;
+  color: #4a90e2; /* Changed from #1a73e8 to a softer blue */
   margin-bottom: 20px;
   font-size: 24px;
 }
@@ -95,11 +95,11 @@ onMounted(() => {
   height: 400px;
   overflow-y: auto;
   padding: 15px;
-  border: 1px solid #d2e3fc;
+  border: 1px solid #b0d4ff; /* Changed from #d2e3fc to a slightly darker blue */
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  background-color: #f8f9fa;
+  background-color: #fafafa; /* Changed from #f8f9fa to a slightly warmer tone */
 }
 
 .message {
@@ -119,7 +119,7 @@ onMounted(() => {
 }
 
 .user .message-content {
-  background-color: #1a73e8;
+  background-color: #4a90e2; /* Changed from #1a73e8 to match the title color */
   color: white;
   border-bottom-right-radius: 4px;
 }
@@ -129,8 +129,8 @@ onMounted(() => {
 }
 
 .bot .message-content {
-  background-color: #e8f0fe;
-  color: #202124;
+  background-color: #e6f2ff; /* Changed from #e8f0fe to a lighter blue */
+  color: #333333; /* Changed from #202124 to a softer black */
   border-bottom-left-radius: 4px;
 }
 
@@ -142,7 +142,7 @@ onMounted(() => {
 input {
   flex-grow: 1;
   padding: 12px 16px;
-  border: 2px solid #1a73e8;
+  border: 2px solid #4a90e2; /* Changed from #1a73e8 to match the new blue */
   border-radius: 25px;
   font-size: 16px;
   outline: none;
@@ -150,12 +150,12 @@ input {
 }
 
 input:focus {
-  border-color: #174ea6;
+  border-color: #3a78c9; /* Changed from #174ea6 to a darker shade of the new blue */
 }
 
 button {
   padding: 12px 24px;
-  background-color: #1a73e8;
+  background-color: #4a90e2; /* Changed from #1a73e8 to match the new blue */
   color: white;
   border: none;
   border-radius: 25px;
@@ -167,6 +167,6 @@ button {
 }
 
 button:hover {
-  background-color: #174ea6;
+  background-color: #3a78c9; /* Changed from #174ea6 to match the new focus color */
 }
 </style>
