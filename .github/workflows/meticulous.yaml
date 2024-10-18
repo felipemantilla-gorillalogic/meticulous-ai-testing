@@ -74,3 +74,11 @@ jobs:
           api-token: ${{ secrets.METICULOUS_API_TOKEN }}
           # TODO: Update the port and protocol below to match your app's frontend
           app-url: 'http://localhost:5173/'
+
+      # This is the pipeline for octomind
+      - uses: OctoMind-dev/automagically-action-execute@v2
+        with:
+          url: 'https://6312-186-84-88-160.ngrok-free.app' # this one should be the public url
+          token: ${{ secrets.AUTOMAGICALLY_TOKEN }}
+          testTargetId: '374d3f1a-b167-4a9f-84ac-8f6e3ac280ca' # this one should be the testTargetId that you also get from us
+          blocking: false # if the pipeline should wait for all test results to pass, default is FALSE
