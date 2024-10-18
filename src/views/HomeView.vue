@@ -48,6 +48,9 @@ onMounted(() => {
           :key="message.id"
           :class="['message', message.sender]"
         >
+          <div class="avatar" :class="message.sender">
+            {{ message.sender === 'bot' ? 'BOT' : 'U' }}
+          </div>
           <div class="message-content">{{ message.text }}</div>
         </div>
       </div>
@@ -105,6 +108,8 @@ onMounted(() => {
 .message {
   margin-bottom: 15px;
   max-width: 80%;
+  display: flex;
+  align-items: flex-start;
 }
 
 .message-content {
@@ -114,14 +119,33 @@ onMounted(() => {
   line-height: 1.4;
 }
 
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
 .user {
   align-self: flex-end;
+  flex-direction: row-reverse;
 }
 
 .user .message-content {
   background-color: #4a90e2; /* Changed from #1a73e8 to match the title color */
   color: white;
   border-bottom-right-radius: 4px;
+}
+
+.user .avatar {
+  margin-right: 0;
+  margin-left: 10px;
+  background-color: #4a90e2;
 }
 
 .bot {
@@ -132,6 +156,10 @@ onMounted(() => {
   background-color: #e6f2ff; /* Changed from #e8f0fe to a lighter blue */
   color: #333333; /* Changed from #202124 to a softer black */
   border-bottom-left-radius: 4px;
+}
+
+.bot .avatar {
+  background-color: #3a78c9;
 }
 
 .chat-input {
